@@ -32,3 +32,18 @@ function isValidSubsequence(array, sequence) {
     //  if we have succesfully traversed the array, then the subsequence was found
     return sequenceIndex == sequence.length
 }
+
+// PYTHON SOLUTION
+
+// def isValidSubsequence(array, sequence):
+//     sequenceIndex = 0
+
+// for value in array:
+//     if sequenceIndex == len(sequence):
+//     break
+// if sequence[sequenceIndex] == value:
+//     sequenceIndex += 1
+// return sequenceIndex == len(sequence)
+
+
+// ********************************************************************************************
