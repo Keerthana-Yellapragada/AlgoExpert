@@ -16,4 +16,19 @@ function twoNumberSum(array, targetSum) {
 
 // ****************************************************************
 
-//
+// VALIDATE SUBSEQUENCE
+
+function isValidSubsequence(array, sequence) {
+    let arrayIndex = 0
+    let sequenceIndex = 0
+
+    while (arrayIndex < array.length && sequence < sequence.length) {
+        if (array[arrayIndex] == sequence[sequenceIndex]) {
+            sequenceIndex++
+        }
+        arrayIndex++
+    }
+
+    //  if we have succesfully traversed the array, then the subsequence was found
+    return sequenceIndex == sequence.length
+}
