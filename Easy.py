@@ -12,3 +12,8 @@ def isValidSubsequence(array, sequence):
 
 
 # ***************************************************
+# Sorted Square Array
+def sortedSquaredArray(array):
+    return sorted([x**2 for x in array])
+
+# ***************************************************
