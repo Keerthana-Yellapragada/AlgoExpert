@@ -98,6 +98,19 @@
 
 #  2 SUM SORTED INPUT ARRAY
 
+def twoSum2(arr, target):
+    l, r = 0, len(arr) - 1
+    while (l < r):
+        if (arr[l] + arr[r] > target):
+            r -= 1
+        if (arr[l] + arr[r] < target):
+            l += 1
+        if (arr[l] + arr[r] == target):
+            return [l, r]
+
+
+print(twoSum2([1, 3, 4, 5, 7, 10, 11], 9))
+
 
 #  3 SUM
 def threeSum(self, nums):
