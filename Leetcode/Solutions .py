@@ -64,35 +64,35 @@
 
 
 # class Solution(object):
-#     def isPalindrome(self, s):
-#         """
-#         :type s: str
-#         :rtype: bool
-#         """
-#         # 2 pointers
-#         new_string = ""
+def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        # 2 pointers
+        new_string = ""
 
 
-#         for letter in s:
-#             if letter.isalnum():
-#                 new_string += letter.lower()
+        for letter in s:
+            if letter.isalnum():
+                new_string += letter.lower()
 
-#         l=0
-#         r=len(new_string) - 1
+        l=0
+        r=len(new_string) - 1
 
-#         print(new_string)
-#         print(r)
-#         #  saas
-#         # l=2
-#         # r=1
-#         while l <= r:
-#             if new_string[l] == new_string[r]:
-#                l = l+1
-#                r = r-1
-#             else:
-#                return False
+        print(new_string)
+        print(r)
+        #  saas
+        # l=2
+        # r=1
+        while l <= r:
+            if new_string[l] == new_string[r]:
+               l = l+1
+               r = r-1
+            else:
+               return False
 
-#         return True
+        return True
 
 
 
@@ -134,3 +134,22 @@ def threeSum(self, nums):
                 r = r - 1
 
     return result
+
+
+# BUY AND SELL STOCK
+def buySellStock2(arr):
+    maxProfit = 0
+    currProfit = 0
+    l = 0
+    r = l + 1
+
+    while (r < len(arr)):
+        if (arr[l] > arr[r]):
+            l += 1
+            r += 1
+        elif (arr[l] < arr[r]):
+            currProfit = arr[r] - arr[l]
+            maxProfit = max(maxProfit, currProfit)
+            r += 1
+
+    return maxProfit
