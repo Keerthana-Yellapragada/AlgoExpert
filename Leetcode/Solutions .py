@@ -145,9 +145,9 @@ def buySellStock2(arr):
 
     while (r < len(arr)):
         if (arr[l] > arr[r]):
-            l += 1
+            l = r
             r += 1
-        elif (arr[l] < arr[r]):
+        elif (arr[l] <= arr[r]):
             currProfit = arr[r] - arr[l]
             maxProfit = max(maxProfit, currProfit)
             r += 1
