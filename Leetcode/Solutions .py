@@ -153,3 +153,87 @@ def buySellStock2(arr):
             r += 1
 
     return maxProfit
+
+# def buySellStock(prices):
+#     l, r = 0, 1
+#     maxP = 0
+
+#     while(r < len(prices)):
+#         if(prices[l] < prices[r]):
+#             profit = prices[r]-prices[l]
+#             if(maxP < profit):
+#                 maxP = profit
+#             #maxP = max(maxP, profit)
+#         else:
+#             l = r
+#         r+=1
+
+#     return maxP
+
+# print(buySellStock([7,1,5,3,6,4]))
+
+
+# did not work but passed some test cases
+
+def longestRepeatingCharReplacement(str, k):
+    l = 0
+    r = 1
+    count = 1
+    maxCount = 0
+    newStr = list(str)
+
+    while(r < len(str)):
+        if newStr[l] == newStr[r]:
+            count+=1
+            maxCount = max(maxCount, count)
+        else:
+            if k != 0:
+                newStr[r] = newStr[l]
+                k-=1
+                count+=1
+                maxCount = max(maxCount, count)
+            else:
+                l=r
+                r=l+1
+                count = 0
+
+        r+=1
+        l+=1
+
+
+    return maxCount
+
+
+
+
+# print(longestRepeatingCharReplacement("ABAB", 2)) #4
+# print(longestRepeatingCharReplacement("AABABBA", 1)) #4
+
+
+# smallest contiguous subarray taht's greater than or equal to target
+
+def minSizeSubArray(nums, target):
+    length = 0
+    minLength = float("inf")
+    currSum = 0
+    l=0
+    r=0
+
+    for i in range(len(nums)):
+
+        if(currSum < target):
+            l=i
+            r=l+1
+            currSum = nums[l]
+
+            while(currSum < target and r<len(nums)):
+                currSum+=nums[r]
+                if(currSum < target):
+                    r+=1
+            length = r-l+1
+            minLength = min(minLength, length)
+
+
+    return minLength
+
+# print(minSizeSubArray([2,3,1,2,4,3], 7))
