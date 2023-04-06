@@ -41,3 +41,30 @@ def removeDuplicatesFromLinkedList(linkedList):
             currNode = currNode.next
 
     return linkedList
+
+# ******************************************************
+
+# REVERSE A LINKED LIST
+
+# This is an input class. Do not edit.
+
+
+class LinkedList:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+def reverseLinkedList(head):
+    # Write your code here.
+    currNode = head
+    prev = None
+
+    while currNode:
+        temp = currNode.next
+        # temp.next = currNode
+        currNode.next = prev
+        prev = currNode
+        currNode = temp
+
+    return prev
