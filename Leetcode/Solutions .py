@@ -1,5 +1,41 @@
 
+
+# SOLUTIONS
+
+# *************************************************************************
 # #   VALID PALINDROME
+
+# class Solution(object):
+def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        # 2 pointers
+        new_string = ""
+
+
+        for letter in s:
+            if letter.isalnum():
+                new_string += letter.lower()
+
+        l=0
+        r=len(new_string) - 1
+
+        print(new_string)
+        print(r)
+        #  saas
+        # l=2
+        # r=1
+        while l <= r:
+            if new_string[l] == new_string[r]:
+               l = l+1
+               r = r-1
+            else:
+               return False
+
+        return True
+
 
 #  def isPalindrome(self, s):
 #         """
@@ -63,36 +99,7 @@
 #         return new_string == reversed_string
 
 
-# class Solution(object):
-def isPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
-        # 2 pointers
-        new_string = ""
-
-
-        for letter in s:
-            if letter.isalnum():
-                new_string += letter.lower()
-
-        l=0
-        r=len(new_string) - 1
-
-        print(new_string)
-        print(r)
-        #  saas
-        # l=2
-        # r=1
-        while l <= r:
-            if new_string[l] == new_string[r]:
-               l = l+1
-               r = r-1
-            else:
-               return False
-
-        return True
+# *************************************************************************
 
 
 
@@ -110,6 +117,8 @@ def twoSum2(arr, target):
 
 
 print(twoSum2([1, 3, 4, 5, 7, 10, 11], 9))
+# *************************************************************************
+
 
 
 #  3 SUM
@@ -134,6 +143,8 @@ def threeSum(self, nums):
                 r = r - 1
 
     return result
+# *************************************************************************
+
 
 
 # BUY AND SELL STOCK
@@ -171,6 +182,8 @@ def buySellStock2(arr):
 #     return maxP
 
 # print(buySellStock([7,1,5,3,6,4]))
+# *************************************************************************
+
 
 
 # did not work but passed some test cases
@@ -209,6 +222,8 @@ def longestRepeatingCharReplacement(str, k):
 # print(longestRepeatingCharReplacement("ABAB", 2)) #4
 # print(longestRepeatingCharReplacement("AABABBA", 1)) #4
 
+# *************************************************************************
+
 
 # smallest contiguous subarray taht's greater than or equal to target
 
@@ -238,6 +253,10 @@ def minSizeSubArray(nums, target):
 
 # print(minSizeSubArray([2,3,1,2,4,3], 7))
 
+# *************************************************************************
+
+
+# remove duplicates from a linked list:
 
 # # This is an input class. Do not edit.
 class LinkedList:
@@ -245,7 +264,6 @@ class LinkedList:
         self.value = value
         self.next = None
 
-# remove duplicates from a linked list:
 def removeDuplicatesFromLinkedList(linkedList):
 
     currNode = linkedList
