@@ -237,3 +237,23 @@ def minSizeSubArray(nums, target):
     return minLength
 
 # print(minSizeSubArray([2,3,1,2,4,3], 7))
+
+
+# # This is an input class. Do not edit.
+class LinkedList:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+# remove duplicates from a linked list:
+def removeDuplicatesFromLinkedList(linkedList):
+
+    currNode = linkedList
+
+    while (currNode.next is not None):
+        if currNode.value == currNode.next.value:
+            currNode.next = currNode.next.next
+        else:
+            currNode = currNode.next
+
+    return linkedList
