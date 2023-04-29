@@ -17,3 +17,43 @@ employee = [
   [2, 'John'],
   [3, 'Jill'],
 ]
+
+// Union
+let pid: string | number
+pid = '22'
+
+// Enum
+enum Direction1 {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+
+enum Direction2 {
+  Up = 'Up',
+  Down = 'Down',
+  Left = 'Left',
+  Right = 'Right',
+}
+
+// Objects
+type User = {
+  id: number
+  name: string
+}
+
+const user: User = {
+  id: 1,
+  name: 'John',
+}
+
+// Type Assertion
+let cid: any = 1
+// let customerId = <number>cid
+let customerId = cid as number
+
+// Functions
+function addNum(x: number, y: number): number {
+  return x + y
+}
