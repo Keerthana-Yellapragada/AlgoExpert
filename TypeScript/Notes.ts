@@ -7,8 +7,16 @@ let x: any = 'Hello'
 let ids: number[] = [1, 2, 3, 4, 5]
 let arr: any[] = [1, true, 'Hello']
 
+
+
+
 // Tuple
 let person: [number, string, boolean] = [1, 'Brad', true]
+
+
+
+
+
 // Tuple Array
 let employees: [number, string][]
 
@@ -18,9 +26,13 @@ employee = [
   [3, 'Jill'],
 ]
 
+
+
 // Union
 let pid: string | number
 pid = '22'
+
+
 
 // Enum
 enum Direction1 {
@@ -37,6 +49,8 @@ enum Direction2 {
   Right = 'Right',
 }
 
+
+
 // Objects
 type User = {
   id: number
@@ -48,19 +62,28 @@ const user: User = {
   name: 'John',
 }
 
+
+
+
 // Type Assertion
 let cid: any = 1
 // let customerId = <number>cid
 let customerId = cid as number
 
+
+
 // Functions
 function addNum(x: number, y: number): number {
   return x + y
 }
+
+
 // Void
 function log(message: string | number): void {
   console.log(message)
 }
+
+
 
 // Interfaces
 interface UserInterface {
@@ -86,6 +109,8 @@ interface PersonInterface {
   name: string
   register(): string
 }
+
+
 
 // Classes
 class Person implements PersonInterface {
