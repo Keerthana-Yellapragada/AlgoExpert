@@ -1,6 +1,7 @@
 //  TWO NUMBER SUM
 function twoNumberSum(array, targetSum) {
-    // Write your code here.
+
+
     let newArray = []
 
     for (let i = 0; i < array.length; i++) {
