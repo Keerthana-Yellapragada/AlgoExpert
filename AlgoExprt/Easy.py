@@ -8,12 +8,14 @@ def isValidSubsequence(array, sequence):
             break
         if sequence[sequenceIndex] == value:
             sequenceIndex += 1
+
     return sequenceIndex == len(sequence)
 
 
 # ***************************************************
 # Sorted Square Array
 def sortedSquaredArray(array):
+
     return sorted([x**2 for x in array])
 
 # ***************************************************
