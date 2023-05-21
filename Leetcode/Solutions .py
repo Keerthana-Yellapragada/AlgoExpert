@@ -317,8 +317,6 @@ def nextPermutation(self, nums):
         return ans
 
 
-
-
 # 24. Swap Nodes in Pairs
 
   def swapPairs(self, head: ListNode) -> ListNode:
