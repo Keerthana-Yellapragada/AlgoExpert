@@ -9,8 +9,6 @@ let ids: number[] = [1, 2, 3, 4, 5]
 let arr: any[] = [1, true, 'Hello']
 
 
-
-
 // Tuple
 let person: [number, string, boolean] = [1, 'Brad', true]
 
