@@ -12,8 +12,6 @@ let arr: any[] = [1, true, 'Hello']
 // Tuple
 let person: [number, string, boolean] = [1, 'Brad', true]
 
-
-
 // Tuple Array
 let employees: [number, string][]
 
