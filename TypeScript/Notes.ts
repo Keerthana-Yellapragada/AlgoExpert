@@ -45,7 +45,6 @@ enum Direction2 {
 }
 
 
-
 // Objects
 type User = {
   id: number
