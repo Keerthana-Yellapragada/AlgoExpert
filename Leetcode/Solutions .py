@@ -385,7 +385,8 @@ def mySqrt(self, x: int) -> int:
 
 
 # Linked List Cycle
- def hasCycle(self, head: Optional[ListNode]) -> bool:
+def hasCycle(self, head: Optional[ListNode]) -> bool:
+
         # Initialize two pointers to the head of the linked list
         slow = head
         fast = head
