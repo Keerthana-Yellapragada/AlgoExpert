@@ -381,3 +381,26 @@ def mySqrt(self, x: int) -> int:
     #         else:
     #             left=mid+1
     #     return right
+
+
+
+# Linked List Cycle
+ def hasCycle(self, head: Optional[ListNode]) -> bool:
+        # Initialize two pointers to the head of the linked list
+        slow = head
+        fast = head
+
+        # Traverse the linked list using the slow and fast pointers
+        while fast and fast.next:
+        # Move the slow pointer one node at a time
+            slow = slow.next
+
+        # Move the fast pointer two nodes at a time
+            fast = fast.next.next
+
+        # If the fast pointer ever equals the slow pointer, then there is a cycle
+            if slow == fast:
+                return True
+
+        # If we have reached the end of the linked list, then there is no cycle
+        return False
