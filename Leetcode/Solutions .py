@@ -319,7 +319,7 @@ def nextPermutation(self, nums):
 
 # 24. Swap Nodes in Pairs
 
-  def swapPairs(self, head: ListNode) -> ListNode:
+def swapPairs(self, head: ListNode) -> ListNode:
 
         dummy = prev = ListNode(0)
         prev.next = head
