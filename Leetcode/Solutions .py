@@ -359,3 +359,12 @@ def romanToInt(self, s: str) -> int:
         }
         s = s.replace("IV", "IIII").replace("IX", "VIIII").replace("XL", "XXXX").replace("XC", "LXXXX").replace("CD", "CCCC").replace("CM", "DCCCC")
         return sum(map(lambda x: roman_to_integer[x], s))
+
+
+# 69. Sqrt(x)
+
+def mySqrt(self, x: int) -> int:
+        number=1
+        while number*number<=x:
+            number+=1
+        return number
