@@ -298,7 +298,7 @@ def nextPermutation(self, nums):
 
 
 # 22. Generate Parentheses
- def generateParenthesis(self, n: int) -> List[str]:
+def generateParenthesis(self, n: int) -> List[str]:
 
 
         def helper(ans, s, left, right):
