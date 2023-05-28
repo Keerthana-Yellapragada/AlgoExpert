@@ -383,7 +383,6 @@ def mySqrt(self, x: int) -> int:
     #     return right
 
 
-
 # Linked List Cycle
 def hasCycle(self, head: Optional[ListNode]) -> bool:
 
