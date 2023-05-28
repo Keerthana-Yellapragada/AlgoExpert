@@ -29,3 +29,6 @@ var jsonStringify = function (object) {
         return '{' + items.join(',') + '}';
     }
 };
+
+
+// Roman to Integer
