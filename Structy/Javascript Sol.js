@@ -73,4 +73,5 @@ const compress = (s) => {
     }
 
     return result.join('');
+
 };
