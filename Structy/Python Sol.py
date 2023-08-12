@@ -82,3 +82,19 @@ def most_frequent_char(s):
     if best is None or count[char] > count[best]:
       best = char
   return best
+
+
+
+# pair sum
+
+
+def pair_sum(numbers, target_sum):
+  previous_numbers = {}
+
+  for index, num in enumerate(numbers):
+    complement = target_sum - num
+
+    if complement in previous_numbers:
+      return (index, previous_numbers[complement])
+
+    previous_numbers[num] = index
