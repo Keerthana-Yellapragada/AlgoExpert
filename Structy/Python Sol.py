@@ -14,20 +14,54 @@ return True
 
 # uncompress
 def uncompress(s):
-  numbers = '0123456789'
-  result = []
+
+    #  loop through main string
+    #  divide into groups
+
+    #  two pointers start at first character of string ( i, j) = 0
+    # increment j until isalpha(string[j]) === true
+    # add string[i] till string[j-1] to a varible called "numberreps"
+    #  print out string[j] 'numberreps' amount of times
+    # increment j + 1
+    #  reset i to equal j
+    #  repeat process
+
   i = 0
   j = 0
-  while j < len(s):
-    if s[j] in numbers:
-      j += 1
-    else:
-      num = int(s[i:j])
-      result.append(s[j] * num)
+# 12y25h
+  result = []
+  for charac in s:
+
+    #      if charac is alphabet, then we stop and print
+    if charac.isalpha() is True:
+
+      num_reps = ''
+#       '12'
+
+      while i < j:
+        print("S at i :", s[i])
+        num_reps += s[i]
+        i += 1
+
+      letter = s[j]
+      totalreps = int(num_reps)
+
+      result.append(letter * totalreps)
+
+#   reset
       j += 1
       i = j
 
+#    if char is a number, we move the second pointer (first pointer doesn't move because it marks the beginning)
+    else:
+      j += 1
+
   return ''.join(result)
+
+
+
+
+
 
 
 # compress
