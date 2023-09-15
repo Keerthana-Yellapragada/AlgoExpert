@@ -8,6 +8,7 @@ const isPrime = (n) => {
     return true;
 };
 
+// *********************************************************
 
 // uncompress
 const uncompress = (s) => {
@@ -30,28 +31,28 @@ const uncompress = (s) => {
     return result.join('');
 };
 
-
+// *********************************************************
 // compress
-def compress(s):
-    s += '!'
-result = []
-i = 0
-j = 0
-while j < len(s):
-    if s[i] == s[j]:
-    j += 1
-else :
-    num = j - i
-if num == 1:
-    result.append(s[i])
-else :
-    result.append(str(num))
-result.append(s[i])
-i = j
+// def compress(s):
+// s += '!'
+// result = []
+// i = 0
+// j = 0
+// while j < len(s):
+//     if s[i] == s[j]:
+//         j += 1
+//     else :
+//     num = j - i
+// if num == 1:
+//     result.append(s[i])
+// else :
+// result.append(str(num))
+// result.append(s[i])
+// i = j
 
-return ''.join(result)
+// return ''.join(result)
 
-
+// *********************************************************
 // compress
 const compress = (s) => {
     let result = [];
@@ -77,7 +78,7 @@ const compress = (s) => {
 };
 
 
-
+// *********************************************************
 // Anagram
 const anagrams = (s1, s2) => {
     const count = {};
@@ -104,3 +105,35 @@ const anagrams = (s1, s2) => {
 
     return true;
 };
+
+
+// *********************************************************
+// Most Frequent Char
+
+const mostFrequentChar = (s) => {
+    let counter = {}
+
+    for (let letter of s) {
+        if (counter[letter] === undefined) {
+            counter[letter] = 1
+        } else {
+            counter[letter]++
+        }
+    }
+
+
+    let mostFreq = 0;
+    let mostFreqLetter;
+
+    for (let letter in counter) {
+        if (counter[letter] > mostFreq) {
+            mostFreqLetter = letter
+            mostFreq = counter[letter]
+        }
+    }
+
+
+
+    return mostFreqLetter
+};
+// *********************************************************
