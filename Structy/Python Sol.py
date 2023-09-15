@@ -146,3 +146,9 @@ def pair_product(numbers, target_product):
       return (index, previous_nums[complement])
 
     previous_nums[num] = index
+
+
+# Anagram
+def anagrams(s1, s2):
+
+  return Counter(s1) == Counter(s2)
