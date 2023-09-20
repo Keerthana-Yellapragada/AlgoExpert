@@ -173,3 +173,12 @@ def pair_product(numbers, target_product):
       return (index, previous_nums[complement])
 
     previous_nums[num] = index
+
+
+def intersection(a, b):
+  result = []
+
+  for item in b:
+    if item in a:
+      result.append(item)
+  return result
