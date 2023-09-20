@@ -404,3 +404,23 @@ def hasCycle(self, head: Optional[ListNode]) -> bool:
 
         # If we have reached the end of the linked list, then there is no cycle
         return False
+
+
+
+
+# twoSum
+def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        #  index are stored as dict valuse, nums are keys
+        numsObj = {}
+        for i,n in enumerate(nums):
+            diff = target - n
+            if diff in numsObj:
+                return [numsObj[diff], i]
+                #  indices of numbers that add up to target
+            else:
+                numsList[n] = i
