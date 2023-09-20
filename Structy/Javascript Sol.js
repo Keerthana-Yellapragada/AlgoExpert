@@ -118,3 +118,20 @@ const mostFrequentChar = (s) => {
     return mostFreqLetter
 };
 // *********************************************************
+
+const intersection = (a, b) => {
+    // todo
+    const set = new Set()
+    let result = []
+    for (let item of a) {
+        if (!set.has(item)) {
+            set.add(item)
+        }
+    }
+    for (let item of b) {
+        if (set.has(item)) {
+            result.push(item)
+        }
+    }
+    return result
+};
