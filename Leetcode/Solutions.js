@@ -31,4 +31,8 @@ var jsonStringify = function (object) {
 };
 
 
-// 141. Linked List Cycle
+var containsDuplicate = function (nums) {
+    const s = new Set(nums);
+    return s.size !== nums.length
+
+};
