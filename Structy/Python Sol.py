@@ -164,77 +164,87 @@ def pair_sum(numbers, target_sum):
 
 
 def pair_product(numbers, target_product):
-  previous_nums = {}
+    previous_nums = {}
 
-  for index, num in enumerate(numbers):
-    complement = target_product / num
+    for index, num in enumerate(numbers):
+        complement = target_product / num
 
-    if complement in previous_nums:
-      return (index, previous_nums[complement])
+        if complement in previous_nums:
+            return (index, previous_nums[complement])
 
-    previous_nums[num] = index
+        previous_nums[num] = index
 
 
 def intersection(a, b):
-  result = []
+    result = []
 
-  for item in b:
-    if item in a:
-      result.append(item)
-  return result
+    for item in b:
+        if item in a:
+            result.append(item)
+    return result
 
 
 def five_sort(nums):
-  i = 0
-  j = len(nums) - 1
-  while i < j:
-    if nums[j] == 5:
-       j -= 1
-    elif nums[i] == 5:
-      nums[i], nums[j] = nums[j], nums[i]
-      i += 1
-    else:
-      i += 1
-  return nums
+    i = 0
+    j = len(nums) - 1
+    while i < j:
+        if nums[j] == 5:
+            j -= 1
+        elif nums[i] == 5:
+            nums[i], nums[j] = nums[j], nums[i]
+            i += 1
+        else:
+            i += 1
+    return nums
 
 
 def paired_parentheses(string):
-  count = 0
+    count = 0
 
-  for char in string:
-    if char == '(':
-      count += 1
-    elif char == ')':
-      if count == 0:
-        return False
-      count -= 1
+    for char in string:
+        if char == '(':
+            count += 1
+        elif char == ')':
+            if count == 0:
+                return False
+            count -= 1
 
-  return count == 0
-
+    return count == 0
 
 
 # LINKED LISTS
 
 
 def linked_list_values(head):
-  values_list = []
+    values_list = []
 
-  curr = head
+    curr = head
 
-  while curr is not None:
+    while curr is not None:
 
-    values_list.append(curr.val)
+        values_list.append(curr.val)
 
-    curr=curr.next
-  return values_list
+        curr = curr.next
+    return values_list
 
 
 def sum_list(head):
-  sum = 0
+    sum = 0
 
+    curr = head
+    while curr is not None:
+        sum += curr.val
+        curr = curr.next
+
+    return sum
+
+
+def linked_list_find(head, target):
   curr = head
+
   while curr is not None:
-    sum += curr.val
+    if curr.val == target:
+      return True
     curr = curr.next
 
-  return sum
+  return False
