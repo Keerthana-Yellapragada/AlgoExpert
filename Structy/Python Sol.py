@@ -210,3 +210,20 @@ def paired_parentheses(string):
       count -= 1
 
   return count == 0
+
+
+
+# LINKED LISTS
+
+
+def linked_list_values(head):
+  values_list = []
+
+  curr = head
+
+  while curr is not None:
+
+    values_list.append(curr.val)
+
+    curr=curr.next
+  return values_list
