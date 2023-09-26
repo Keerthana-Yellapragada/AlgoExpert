@@ -227,3 +227,14 @@ def linked_list_values(head):
 
     curr=curr.next
   return values_list
+
+
+def sum_list(head):
+  sum = 0
+
+  curr = head
+  while curr is not None:
+    sum += curr.val
+    curr = curr.next
+
+  return sum
