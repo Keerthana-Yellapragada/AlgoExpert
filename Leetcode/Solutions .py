@@ -408,19 +408,15 @@ def hasCycle(self, head: Optional[ListNode]) -> bool:
 
 
 
-# twoSum
-def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        #  index are stored as dict valuse, nums are keys
-        numsObj = {}
-        for i,n in enumerate(nums):
-            diff = target - n
-            if diff in numsObj:
-                return [numsObj[diff], i]
-                #  indices of numbers that add up to target
-            else:
-                numsList[n] = i
+# # twoSum
+# def twoSum(self, nums, target):
+
+#         #  index are stored as dict valuse, nums are keys
+#         numsObj = {}
+#         for i,n in enumerate(nums):
+#             diff = target - n
+#             if diff in numsObj:
+#                 return [numsObj[diff], i]
+#                 #  indices of numbers that add up to target
+#             else:
+#                 numsList[n] = i
