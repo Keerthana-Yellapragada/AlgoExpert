@@ -249,7 +249,6 @@ def linked_list_find(head, target):
 
   return False
 
-git a
 
 def get_node_value(head, index):
 
