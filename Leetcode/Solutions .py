@@ -362,7 +362,6 @@ def romanToInt(self, s: str) -> int:
 
 
 
-
 # 69. Sqrt(x)
 
 def mySqrt(self, x: int) -> int:
