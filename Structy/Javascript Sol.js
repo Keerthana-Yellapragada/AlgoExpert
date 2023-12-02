@@ -259,3 +259,13 @@ const zipperLists = (head1, head2) => {
     head2.next = zipperLists(next1, next2);
     return head1;
 };
+
+
+
+
+const reverseList = (head, prev = null) => {
+    if (head === null) return prev;
+    const next = head.next;
+    head.next = prev;
+    return reverseList(next, head);
+};
