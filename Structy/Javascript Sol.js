@@ -107,6 +107,7 @@ const mostFrequentChar = (s) => {
     }
   }
 
+
   return mostFreqLetter;
 };
 // *********************************************************
