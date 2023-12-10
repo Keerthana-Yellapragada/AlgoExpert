@@ -97,6 +97,7 @@ const mostFrequentChar = (s) => {
     }
   }
 
+
   let mostFreq = 0;
   let mostFreqLetter;
 
