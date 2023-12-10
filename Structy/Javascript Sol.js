@@ -97,10 +97,8 @@ const mostFrequentChar = (s) => {
     }
   }
 
-
   let mostFreq = 0;
   let mostFreqLetter;
-
 
   for (let letter in counter) {
     if (counter[letter] > mostFreq) {
@@ -108,7 +106,6 @@ const mostFrequentChar = (s) => {
       mostFreq = counter[letter];
     }
   }
-
 
   return mostFreqLetter;
 };
