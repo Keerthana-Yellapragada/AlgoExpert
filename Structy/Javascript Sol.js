@@ -346,11 +346,26 @@ const treeIncludes = (root, target) => {
 //  BT- min value
 
 // recursive sol
-const treeMinValue = (root) => {
+const treeMinValueRecursive = (root) => {
   // todo
   if (root === null) return Infinity;
   const smallestLeft = treeMinValue(root.left)
   const smallestRight = treeMinValue(root.right)
 
   return Math.min(root.val, smallestRight, smallestRight)
+};
+
+// iterative
+const treeMinValue = (root) => {
+  const stack = [root];
+
+  let smallest = Infinity;
+  while (stack.length) {
+    const current = stack.pop();
+    if (current.val < smallest) smallest = current.val;
+
+    if (current.left !== null) stack.push(current.left);
+    if (current.right !== null) stack.push(current.right);
+  }
+  return smallest;
 };
