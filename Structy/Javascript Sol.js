@@ -369,3 +369,18 @@ const treeMinValue = (root) => {
   }
   return smallest;
 };
+
+// bfs iterative
+const treeMinValueBFS = (root) => {
+  const queue = [root];
+
+  let smallest = Infinity;
+  while (queue.length) {
+    const current = queue.shift();
+    if (current.val < smallest) smallest = current.val;
+
+    if (current.left !== null) queue.push(current.left);
+    if (current.right !== null) queue.push(current.right);
+  }
+  return smallest;
+};
