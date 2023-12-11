@@ -340,3 +340,17 @@ const treeIncludes = (root, target) => {
   if (root.val === target) return true;
   return treeIncludes(root.left, target) || treeIncludes(root.right, target)
 };
+
+
+
+//  BT- min value
+
+// recursive sol
+const treeMinValue = (root) => {
+  // todo
+  if (root === null) return Infinity;
+  const smallestLeft = treeMinValue(root.left)
+  const smallestRight = treeMinValue(root.right)
+
+  return Math.min(root.val, smallestRight, smallestRight)
+};
