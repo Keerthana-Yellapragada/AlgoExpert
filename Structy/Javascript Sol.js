@@ -331,3 +331,12 @@ const treeSumDFS = (root) => {
 
   return root.val + treeSum(root.left) + treeSum(root.right)
 };
+
+
+// BT target
+const treeIncludes = (root, target) => {
+  // todo
+  if (root === null) return false;
+  if (root.val === target) return true;
+  return treeIncludes(root.left, target) || treeIncludes(root.right, target)
+};
