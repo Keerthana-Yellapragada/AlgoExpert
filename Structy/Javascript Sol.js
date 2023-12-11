@@ -300,3 +300,23 @@ const breadthFirstValues = (root) => {
 
   return values
 };
+
+
+// Sum of binary tree
+
+const treeSum = (root) => {
+  // todo
+
+  if (root === null) return 0
+  let stack = [root]
+  let sum = 0
+
+  while (stack.length > 0) {
+    let curr = stack.pop()
+    sum += curr.val
+
+    if (curr.left !== null) stack.push(curr.left)
+    if (curr.right !== null) stack.push(curr.right)
+  }
+  return sum
+};
