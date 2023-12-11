@@ -276,3 +276,27 @@ const depthFirstValuesRecursive = (root) => {
 
   return [root.val, ...leftValues, ...rightValues]
 };
+
+
+
+
+// BFS- BINARY TREE
+const breadthFirstValues = (root) => {
+
+  //    empty tree
+  if (root === null) return [];
+  //   fifo
+  let queue = [root]
+  let values = []
+
+  while (queue.length > 0) {
+    let currNode = queue.shift()
+    values.push(currNode.val)
+
+    if (currNode.left !== null) queue.push(currNode.left)
+    if (currNode.right !== null) queue.push(currNode.right)
+
+  }
+
+  return values
+};
