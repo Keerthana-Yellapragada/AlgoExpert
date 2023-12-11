@@ -321,3 +321,13 @@ const treeSum = (root) => {
   }
   return sum
 };
+
+
+// DFS
+const treeSumDFS = (root) => {
+  if (root === null) return 0;
+
+  let sum = 0;
+
+  return root.val + treeSum(root.left) + treeSum(root.right)
+};
