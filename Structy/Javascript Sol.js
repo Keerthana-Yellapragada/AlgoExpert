@@ -304,19 +304,20 @@ const breadthFirstValues = (root) => {
 
 // Sum of binary tree
 
+// sum-BFS
 const treeSum = (root) => {
   // todo
 
   if (root === null) return 0
-  let stack = [root]
+  let queue = [root]
   let sum = 0
 
-  while (stack.length > 0) {
-    let curr = stack.pop()
+  while (queue.length > 0) {
+    let curr = queue.shift()
     sum += curr.val
 
-    if (curr.left !== null) stack.push(curr.left)
-    if (curr.right !== null) stack.push(curr.right)
+    if (curr.left !== null) queue.push(curr.left)
+    if (curr.right !== null) queue.push(curr.right)
   }
   return sum
 };
