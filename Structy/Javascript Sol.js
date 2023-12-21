@@ -392,15 +392,17 @@ const pathFinder = (root, target) => {
   return null;
 };
 
-
 // Tree count
 
 const treeValueCountRecursive = (root, target) => {
   if (root === null) return 0;
   const match = root.val === target ? 1 : 0;
-  return match + treeValueCount(root.left, target) + treeValueCount(root.right, target);
+  return (
+    match +
+    treeValueCount(root.left, target) +
+    treeValueCount(root.right, target)
+  );
 };
-
 
 const treeValueCount = (root, target) => {
   if (root === null) return 0;
@@ -417,7 +419,6 @@ const treeValueCount = (root, target) => {
 
   return count;
 };
-
 
 //  how high
 const howHigh = (node) => {
