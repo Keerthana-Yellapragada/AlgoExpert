@@ -111,8 +111,6 @@ const mostFrequentChar = (s) => {
 };
 // *********************************************************
 
-
-
 const intersection = (a, b) => {
   // todo
   const set = new Set();
@@ -245,11 +243,9 @@ const reverseList = (head, prev = null) => {
   return reverseList(next, head);
 };
 
-
 // DFS
 const depthFirstValues = (root) => {
-  if (root === null)
-    return [];
+  if (root === null) return [];
 
   const values = [];
   const stack = [root];
@@ -258,7 +254,7 @@ const depthFirstValues = (root) => {
     const node = stack.pop();
     values.push(node.val);
 
-    if (node.right !== null)stack.push(node.right);
+    if (node.right !== null) stack.push(node.right);
 
     if (node.left !== null) stack.push(node.left);
   }
@@ -268,39 +264,32 @@ const depthFirstValues = (root) => {
 
 // recursive DFS
 const depthFirstValuesRecursive = (root) => {
-
   if (root === null) return [];
 
-  const leftValues = depthFirstValues(root.left)
-  const rightValues = depthFirstValues(root.right)
+  const leftValues = depthFirstValues(root.left);
+  const rightValues = depthFirstValues(root.right);
 
-  return [root.val, ...leftValues, ...rightValues]
+  return [root.val, ...leftValues, ...rightValues];
 };
-
-
-
 
 // BFS- BINARY TREE
 const breadthFirstValues = (root) => {
-
   //    empty tree
   if (root === null) return [];
   //   fifo
-  let queue = [root]
-  let values = []
+  let queue = [root];
+  let values = [];
 
   while (queue.length > 0) {
-    let currNode = queue.shift()
-    values.push(currNode.val)
+    let currNode = queue.shift();
+    values.push(currNode.val);
 
-    if (currNode.left !== null) queue.push(currNode.left)
-    if (currNode.right !== null) queue.push(currNode.right)
-
+    if (currNode.left !== null) queue.push(currNode.left);
+    if (currNode.right !== null) queue.push(currNode.right);
   }
 
-  return values
+  return values;
 };
-
 
 // Sum of binary tree
 
@@ -308,20 +297,19 @@ const breadthFirstValues = (root) => {
 const treeSum = (root) => {
   // todo
 
-  if (root === null) return 0
-  let queue = [root]
-  let sum = 0
+  if (root === null) return 0;
+  let queue = [root];
+  let sum = 0;
 
   while (queue.length > 0) {
-    let curr = queue.shift()
-    sum += curr.val
+    let curr = queue.shift();
+    sum += curr.val;
 
-    if (curr.left !== null) queue.push(curr.left)
-    if (curr.right !== null) queue.push(curr.right)
+    if (curr.left !== null) queue.push(curr.left);
+    if (curr.right !== null) queue.push(curr.right);
   }
-  return sum
+  return sum;
 };
-
 
 // DFS
 const treeSumDFS = (root) => {
@@ -329,19 +317,16 @@ const treeSumDFS = (root) => {
 
   let sum = 0;
 
-  return root.val + treeSum(root.left) + treeSum(root.right)
+  return root.val + treeSum(root.left) + treeSum(root.right);
 };
-
 
 // BT target
 const treeIncludes = (root, target) => {
   // todo
   if (root === null) return false;
   if (root.val === target) return true;
-  return treeIncludes(root.left, target) || treeIncludes(root.right, target)
+  return treeIncludes(root.left, target) || treeIncludes(root.right, target);
 };
-
-
 
 //  BT- min value
 
@@ -349,10 +334,10 @@ const treeIncludes = (root, target) => {
 const treeMinValueRecursive = (root) => {
   // todo
   if (root === null) return Infinity;
-  const smallestLeft = treeMinValue(root.left)
-  const smallestRight = treeMinValue(root.right)
+  const smallestLeft = treeMinValue(root.left);
+  const smallestRight = treeMinValue(root.right);
 
-  return Math.min(root.val, smallestRight, smallestRight)
+  return Math.min(root.val, smallestRight, smallestRight);
 };
 
 // iterative
@@ -370,7 +355,6 @@ const treeMinValue = (root) => {
   return smallest;
 };
 
-
 // bfs iterative
 const treeMinValueBFS = (root) => {
   const queue = [root];
@@ -386,13 +370,24 @@ const treeMinValueBFS = (root) => {
   return smallest;
 };
 
-
-
-
 //  Max root to leaf sum
 
 const maxPathSum = (root) => {
   if (root === null) return -Infinity;
   if (root.left === null && root.right === null) return root.val;
   return root.val + Math.max(maxPathSum(root.left), maxPathSum(root.right));
+};
+
+// tree path finder
+const pathFinder = (root, target) => {
+  if (root === null) return null;
+  if (root.val === target) return [root.val];
+
+  const leftPath = pathFinder(root.left, target);
+  if (leftPath !== null) return [root.val, ...leftPath];
+
+  const rightPath = pathFinder(root.right, target);
+  if (rightPath !== null) return [root.val, ...rightPath];
+
+  return null;
 };
