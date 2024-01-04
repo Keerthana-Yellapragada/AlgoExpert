@@ -428,3 +428,19 @@ const howHigh = (node) => {
   const rightHeight = howHigh(node.right);
   return 1 + Math.max(leftHeight, rightHeight);
 };
+
+
+
+//  tree path finder
+const TreepathFinder = (root, target) => {
+  if (root === null) return null;
+  if (root.val === target) return [root.val];
+
+  const leftPath = TreepathFinder(root.left, target);
+  if (leftPath !== null) return [root.val, ...leftPath];
+
+  const rightPath = TreepathFinder(root.right, target);
+  if (rightPath !== null) return [root.val, ...rightPath];
+
+  return null;
+};
