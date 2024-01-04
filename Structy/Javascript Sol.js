@@ -473,3 +473,36 @@ const TreepathFinderHelper = (root, target) => {
 
   return null;
 };
+
+// subsets
+const subsets = (elements) => {
+  if (elements.length === 0) return [
+    []
+  ];
+
+  const ele = elements[0];
+  const remainingElements = elements.slice(1);
+  const subsetsWithoutEle = subsets(remainingElements);
+  const subsetsWithEle = subsetsWithoutEle.map((sub) => [ele, ...sub]);
+  return [...subsetsWithoutEle, ...subsetsWithEle];
+};
+
+
+//  permutations
+// recursive sol
+const permutations = (items) => {
+  if (items.length === 0) return [
+    []
+  ];
+
+  const first = items[0];
+  const perms = permutations(items.slice(1));
+
+  const fullPermutations = [];
+  for (let perm of perms) {
+    for (let i = 0; i <= perm.length; i += 1) {
+      fullPermutations.push([...perm.slice(0, i), first, ...perm.slice(i)]);
+    }
+  }
+  return fullPermutations;
+};
