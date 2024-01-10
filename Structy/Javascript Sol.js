@@ -504,6 +504,7 @@ const permutations = (items) => {
       fullPermutations.push([...perm.slice(0, i), first, ...perm.slice(i)]);
     }
   }
+
   return fullPermutations;
 };
 
