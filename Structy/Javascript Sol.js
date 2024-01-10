@@ -280,6 +280,8 @@ const breadthFirstValues = (root) => {
   let queue = [root];
   let values = [];
 
+
+
   while (queue.length > 0) {
     let currNode = queue.shift();
     values.push(currNode.val);
