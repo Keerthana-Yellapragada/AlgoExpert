@@ -12,6 +12,7 @@ const isPrime = (n) => {
 // *********************************************************
 
 // uncompress
+
 const uncompress = (s) => {
   let result = [];
   const numbers = "0123456789";
