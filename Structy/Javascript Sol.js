@@ -5,7 +5,7 @@ const isPrime = (n) => {
     if (n % i === 0) return false;
   }
 
-  
+
   return true;
 };
 
@@ -19,6 +19,7 @@ const uncompress = (s) => {
   let j = 0;
   while (j < s.length) {
     if (numbers.includes(s[j])) {
+
       j += 1;
     } else {
       const num = Number(s.slice(i, j));
