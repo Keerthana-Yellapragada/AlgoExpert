@@ -17,6 +17,7 @@ const uncompress = (s) => {
   const numbers = "0123456789";
   let i = 0;
   let j = 0;
+
   while (j < s.length) {
     if (numbers.includes(s[j])) {
 
