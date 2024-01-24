@@ -19,7 +19,6 @@ const uncompress = (s) => {
 
   while (j < s.length) {
     if (numbers.includes(s[j])) {
-
       j += 1;
     } else {
       const num = Number(s.slice(i, j));
@@ -274,8 +273,6 @@ const depthFirstValuesRecursive = (root) => {
   return [root.val, ...leftValues, ...rightValues];
 };
 
-
-
 // BFS- BINARY TREE
 const breadthFirstValues = (root) => {
   //    empty tree
@@ -283,8 +280,6 @@ const breadthFirstValues = (root) => {
   //   fifo
   let queue = [root];
   let values = [];
-
-
 
   while (queue.length > 0) {
     let currNode = queue.shift();
@@ -398,9 +393,6 @@ const pathFinder = (root, target) => {
   return null;
 };
 
-
-
-
 // Tree count
 
 const treeValueCountRecursive = (root, target) => {
@@ -438,8 +430,6 @@ const howHigh = (node) => {
   return 1 + Math.max(leftHeight, rightHeight);
 };
 
-
-
 //  tree path finder
 const TreepathFinder = (root, target) => {
   if (root === null) return null;
@@ -453,7 +443,6 @@ const TreepathFinder = (root, target) => {
 
   return null;
 };
-
 
 const pathFinder = (root, target) => {
   const result = pathFinderHelper(root, target);
@@ -485,9 +474,7 @@ const TreepathFinderHelper = (root, target) => {
 
 // subsets
 const subsets = (elements) => {
-  if (elements.length === 0) return [
-    []
-  ];
+  if (elements.length === 0) return [[]];
 
   const ele = elements[0];
   const remainingElements = elements.slice(1);
@@ -496,13 +483,10 @@ const subsets = (elements) => {
   return [...subsetsWithoutEle, ...subsetsWithEle];
 };
 
-
 //  permutations
 // recursive sol
 const permutations = (items) => {
-  if (items.length === 0) return [
-    []
-  ];
+  if (items.length === 0) return [[]];
 
   const first = items[0];
   const perms = permutations(items.slice(1));
@@ -517,20 +501,12 @@ const permutations = (items) => {
   return fullPermutations;
 };
 
-
-
-
-
 // create combinations
 
 const createCombinations = (items, k) => {
   if (items.length < k) return [];
 
-
-  if (k === 0) return [
-    []
-  ];
-
+  if (k === 0) return [[]];
 
   const first = items[0];
   const combosWithFirst = [];
