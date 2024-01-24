@@ -9,7 +9,6 @@ const isPrime = (n) => {
 };
 
 // *********************************************************
-
 // uncompress
 
 const uncompress = (s) => {
