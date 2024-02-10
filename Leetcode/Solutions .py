@@ -255,7 +255,6 @@ def minSizeSubArray(nums, target):
 
 # *************************************************************************
 
-
 # remove duplicates from a linked list:
 
 # # This is an input class. Do not edit.
