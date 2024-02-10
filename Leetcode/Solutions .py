@@ -357,6 +357,8 @@ def romanToInt(self, s: str) -> int:
             'D': 500,
             'M': 1000,
         }
+
+
         s = s.replace("IV", "IIII").replace("IX", "VIIII").replace("XL", "XXXX").replace("XC", "LXXXX").replace("CD", "CCCC").replace("CM", "DCCCC")
         return sum(map(lambda x: roman_to_integer[x], s))
 
