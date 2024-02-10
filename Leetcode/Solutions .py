@@ -277,7 +277,6 @@ def removeDuplicatesFromLinkedList(linkedList):
     return linkedList
 
 
-
 # Next permutations
 def nextPermutation(self, nums):
        for i in range(len(nums)-1, 0, -1):
