@@ -300,7 +300,6 @@ def nextPermutation(self, nums):
 # 22. Generate Parentheses
 def generateParenthesis(self, n: int) -> List[str]:
 
-
         def helper(ans, s, left, right):
             if left==0 and right==0:
                 ans.append(s)
