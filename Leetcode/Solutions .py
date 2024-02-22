@@ -422,3 +422,18 @@ def hasCycle(self, head: Optional[ListNode]) -> bool:
 #                 #  indices of numbers that add up to target
 #             else:
 #                 numsList[n] = i
+
+
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """
+        result = ""
+
+        for i in range(min(len(word1),len(word2))):
+            result += word1[i] + word2[i]
+
+        return res + word1[i+1:] + word[i+1:]
